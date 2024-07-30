@@ -3,6 +3,7 @@ package Es_1;
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.Scanner;
+import java.util.Set;
 
 public class Main {
     public static void main(String[] args) {
@@ -11,7 +12,7 @@ public class Main {
         System.out.println("Inserisci un numero!");
         int numUtente = Integer.parseInt(scanner.nextLine());
 
-        HashSet<String> parolaSet = new HashSet<>();
+        Set<String> parolaSet = new HashSet<>();
         ArrayList<String> duplicatiList = new ArrayList<>();
         for (int i = 0; i < numUtente; i++) {
             System.out.println("Inserisci una parola!");
@@ -19,7 +20,7 @@ public class Main {
             if (parolaSet.contains(parola)) {
                 System.out.println("Parola gia inserita nella lista!");
                 duplicatiList.add(parola);
-                i--;
+              
             } else {
                 parolaSet.add(parola);
                 System.out.println(parolaSet);
