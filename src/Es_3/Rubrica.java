@@ -1,7 +1,7 @@
 package Es_3;
 
-import java.util.Collection;
 import java.util.HashMap;
+import java.util.Set;
 
 public class Rubrica {
     private HashMap<String, String> rubrica;
@@ -19,10 +19,17 @@ public class Rubrica {
     }
 
     public void cercaNumero(String numero) {
-        Collection<String> valori = this.rubrica.values();
-        System.out.println(valori);
-        //System.out.println(this.rubrica.get(numero));
+//Collection<String> valori = this.rubrica.values();
+        // System.out.println(valori);
 
+        Set<String> chiaviRubrica = this.rubrica.keySet();
+        for (String chiave : chiaviRubrica) {
+
+            if (this.rubrica.get(chiave) == numero) {
+                System.out.println("Chiave: " + chiave);
+                System.out.println("Valore: " + this.rubrica.get(chiave));
+            }
+        }
     }
 
     public void cercaNome(String nome) {
