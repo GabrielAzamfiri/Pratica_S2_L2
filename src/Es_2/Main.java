@@ -35,11 +35,11 @@ public class Main {
 
     public static List<Integer> listaNNlista(List<Integer> lista) {
 
-        List<Integer> reverseLista = new ArrayList<>();
-        reverseLista = lista.reversed();
+        List<Integer> reverseLista = new ArrayList<>(lista.reversed());
 
-        List<Integer> newLista = new ArrayList<>();
-        newLista.addAll(lista);
+
+        List<Integer> newLista = new ArrayList<>(lista);
+      
 
         newLista.addAll(reverseLista);
 
@@ -48,7 +48,7 @@ public class Main {
     }
 
     public static void stampaPariDispari(List<Integer> lista, boolean scelta) {
-        
+
         if (scelta) {
             System.out.println("Posizioni pari");
 
